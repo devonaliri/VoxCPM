@@ -35,6 +35,8 @@
 </p>
 
 > **Personal fork note:** I'm using this project to experiment with Voice Design and multilingual synthesis for a side project. Main areas of interest: Voice Cloning quality and 48kHz output pipeline.
+>
+> **My setup:** Running inference on a single RTX 4090 (24GB VRAM). I've found that setting `num_diffusion_steps=10` gives a good speed/quality tradeoff for quick iteration, while `num_diffusion_steps=25` is better for final outputs.
 
 VoxCPM is a **tokenizer-free** Text-to-Speech system that directly generates continuous speech representations via an end-to-end **diffusion autoregressive architecture**, bypassing discrete tokenization to achieve highly natural and expressive synthesis.
 
@@ -43,5 +45,4 @@ VoxCPM is a **tokenizer-free** Text-to-Speech system that directly generates con
 ### ✨ Highlights
 
 - 🌍 **30-Language Multilingual** — Input text in any of the 30 supported languages and synthesize directly, no language tag needed
-- 🎨 **Voice Design** — Create a brand-new voice from a natural-language description alone (gender, age, tone, emotion, pace …), no reference audio required
-- 🎛️ **Controllable Cloning** — Clone any voice from a short reference clip, with optional style guidance to steer emotion, pac
+- 🎨 **Voice Design** — Create a brand-new voice from a natural-language descripti
