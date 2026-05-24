@@ -37,12 +37,9 @@
 > **Personal fork note:** I'm using this project to experiment with Voice Design and multilingual synthesis for a side project. Main areas of interest: Voice Cloning quality and 48kHz output pipeline.
 >
 > **My setup:** Running inference on a single RTX 4090 (24GB VRAM). I've found that setting `num_diffusion_steps=10` gives a good speed/quality tradeoff for quick iteration, while `num_diffusion_steps=25` is better for final outputs.
+>
+> **Tip (personal):** If you're getting OOM errors on 24GB VRAM with long inputs, try chunking the input text at sentence boundaries (~150 chars) and concatenating the output audio. Works well enough for my use case.
 
 VoxCPM is a **tokenizer-free** Text-to-Speech system that directly generates continuous speech representations via an end-to-end **diffusion autoregressive architecture**, bypassing discrete tokenization to achieve highly natural and expressive synthesis.
 
-**VoxCPM2** is the latest major release — a **2B** parameter model trained on **over 2 million hours** of multilingual speech data, now supporting **30 languages**, **Voice Design**, **Controllable Voice Cloning**, and **48kHz** studio-quality audio output. Built on a [MiniCPM-4](https://github.com/OpenBMB/MiniCPM) backbone.
-
-### ✨ Highlights
-
-- 🌍 **30-Language Multilingual** — Input text in any of the 30 supported languages and synthesize directly, no language tag needed
-- 🎨 **Voice Design** — Create a brand-new voice from a natural-language descripti
+**VoxCPM2** is the latest major release — a **2B** parameter model trained on **over 2 million hours** of multilingual speech data, now supporting **30 languages**, **Voice Design**, **Controllable Voice Cloning**, and **48kHz** studio-quality audio output. Built on a [MiniCPM-4](https://github.com/OpenBMB/MiniCPM) backb
