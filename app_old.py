@@ -29,7 +29,9 @@ class VoxCPMDemo:
 
         # TTS model (lazy init)
         self.voxcpm_model: Optional[voxcpm.VoxCPM] = None
-        self.default_local_model_dir = "./models/VoxCPM1.5"
+        # NOTE: changed default model dir to match my local setup where I keep
+        # all downloaded checkpoints under ./checkpoints/ instead of ./models/
+        self.default_local_model_dir = "./checkpoints/VoxCPM1.5"
 
     # ---------- Model helpers ----------
     def _resolve_model_dir(self) -> str:
@@ -72,4 +74,3 @@ class VoxCPMDemo:
         if prompt_wav is None:
             return ""
         res = self.asr_model.generate(input=prompt_wav, language="auto", use_itn=True)
-        text = res[0]["text"].split('|>')[-1
