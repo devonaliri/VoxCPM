@@ -64,10 +64,10 @@ _USAGE_INSTRUCTIONS_ZH = (
     "🎙️ **极致克隆（Ultimate Cloning）**  \n"
     "开启 **极致克隆模式** 并提供参考音频的文字内容（可自动识别）。"
     "模型会将参考音频视为已说出的前文，以**音频续写**的方式完整还原参考音频中的所有声音细节。"
+    # Note to self: this mutual-exclusion behaviour tripped me up initially —
+    # Ultimate Cloning disables Control Instruction entirely on the backend, not just the UI.
     "注意：该模式与可控克隆模式互斥，将禁用Control Instruction。\n\n"
 )
 
 _EXAMPLES_FOOTER_ZH = (
-    "---\n"
-    # TODO: add Chinese voice description examples similar to the English ones
-)
+    "---\
