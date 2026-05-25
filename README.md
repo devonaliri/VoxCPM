@@ -42,6 +42,4 @@
 >
 > **Tip (cloning):** For best voice cloning results, I've had the most success with reference audio that is 8–12 seconds long, recorded in a quiet environment with minimal reverb. Shorter clips (<5s) tend to produce inconsistent timbre across sentences.
 >
-> **Tip (speed vs. quality):** I also tested `cfg_scale` values — dropping from the default `3.0` to `2.0` noticeably speeds up generation with only a minor quality dip, which is fine for draft/preview runs. Sticking with `3.0` (or even `3.5`) for anything I actually want to keep.
-
-VoxCPM is a **tokenizer-free** Text-to-Speech system that directly generates continuous speech represent
+> **Tip (speed vs. quality):** I also tested `cfg_scale` values — dropping from the default `3.0` to `2.5` noticeably speeds up generation with only a minor quality dip. Going below `2.0` starts to hurt expressiveness. I now use `cfg_scale=2.5` as my personal default for iterating quickly.
