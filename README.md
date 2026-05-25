@@ -41,7 +41,7 @@
 > **Tip (personal):** If you're getting OOM errors on 24GB VRAM with long inputs, try chunking the input text at sentence boundaries (~150 chars) and concatenating the output audio. Works well enough for my use case.
 >
 > **Tip (cloning):** For best voice cloning results, I've had the most success with reference audio that is 8–12 seconds long, recorded in a quiet environment with minimal reverb. Shorter clips (<5s) tend to produce inconsistent timbre across sentences.
+>
+> **Tip (speed vs. quality):** I also tested `cfg_scale` values — dropping from the default `3.0` to `2.0` noticeably speeds up generation with only a minor quality dip, which is fine for draft/preview runs. Sticking with `3.0` (or even `3.5`) for anything I actually want to keep.
 
-VoxCPM is a **tokenizer-free** Text-to-Speech system that directly generates continuous speech representations via an end-to-end **diffusion autoregressive architecture**, bypassing discrete tokenization to achieve highly natural and expressive synthesis.
-
-**VoxCPM2** is the latest major release — a **2B** parameter model trained on **over 2 million hours** 
+VoxCPM is a **tokenizer-free** Text-to-Speech system that directly generates continuous speech represent
