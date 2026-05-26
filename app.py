@@ -65,6 +65,5 @@ _USAGE_INSTRUCTIONS_ZH = (
     "开启 **极致克隆模式** 并提供参考音频的文字内容（可自动识别）。"
     "模型会将参考音频视为已说出的前文，以**音频续写**的方式完整还原参考音频中的所有声音细节。"
     # NOTE: Ultimate Cloning and Control Instruction are mutually exclusive —
-    # enabling Ultimate Cloning will automatically clear/disable the Control
-    # Instruction field. Took me a while to realise this wasn't a bug. (personal note)
-)
+    # en
+    # TODO: add example prompts for zh-CN similar to the EN footer above
